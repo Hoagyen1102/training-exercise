@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style1-change.css" />
+	<title>JS-1</title>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-inner">
+            <img class="slide-img fade" src="img/coffee1.jpg"/>
+            <p class="title">Coffee 1</p>
+        </div>
+        <button class="btn-prev">
+            <span class="btn-prev-icon"></span>
+        </button>
+        <button class="btn-next">
+            <span class="btn-next-icon"></span>
+        </button>
+        <div class="btn-bottom">
+            <button class="slide-bottom-btn active"></button>
+            <button class="slide-bottom-btn"></button>
+            <button class="slide-bottom-btn"></button>
+        </div>
+    </div>
+    <script>
+    let slides = [
+        {img: 'img/coffee1.jpg', title: 'Coffee 1'},
+        {img: 'img/coffee2.jpg', title: 'Coffee 2'},
+        {img: 'img/coffee3.jpg', title: 'Coffee 3'}
+    ];
+
+    let slideIndex = 0;
+
+    function changeSlide() {
+        let img = document.getElementsByClassName("slide-img")[0],
+        p = document.getElementsByClassName("title")[0],
+        dots = document.getElementsByClassName("slide-bottom-btn");
+
+        img.classList.add('fade-out');
+
+        setTimeout(function() {
+            img.src = slides[slideIndex].img;
+            p.textContent = slides[slideIndex].title;
+            img.classList.remove('fade-out');
+        }, 200);
+
+        for (let i = 0; i < slides.length; i++) {
+            dots[i].classList.remove("active");
+        }
+        dots[slideIndex].classList.add('active');
+    }
+
+    document.querySelector('.btn-next').addEventListener('click', function(){
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        changeSlide();
+    });
+
+    document.querySelector('.btn-prev').addEventListener('click', function() {
+        slideIndex--
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        changeSlide();
+    });
+    </script>
+</body>
+</html>
