@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	<title>JS-3</title>
+</head>
+<body>
+    <div class="main">
+        <h3>Data Table With Full Features</h3>
+        <div class="flex">
+            <div class="sub-flex">
+                <p>Show</p>
+                <select name="show" class="show">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+                <p>entries</p>
+            </div>
+            <div class="sub-flex">
+                <p>Search: </p><input type="text" class="search">
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 218.025px;">Rendering engine<i class="fa-solid fa-arrow-down-short-wide active"></i></th>
+                    <th style="width: 267.35px;">Browser<i class="fa-solid fa-sort"></i></th> 
+                    <th style="width: 236.975px;">Platform(s)<i class="fa-solid fa-sort"></i></th>
+                    <th style="width: 187.15px;">Engine version<i class="fa-solid fa-sort"></i></th>
+                    <th style="width: 134.9px;">CSS grade<i class="fa-solid fa-sort"></i></th>    
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Rendering engine</th>
+                    <th>Browser</th> 
+                    <th>Platform(s)</th>
+                    <th>Engine version</th>
+                    <th>CSS grade</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="flex">
+            <div class="sub-flex">
+                <p class="show-text">Showing 1 to 10 of 57 entries</p>
+            </div>
+            <div class="sub-flex">
+                <div class="pagination">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script3.js"></script>
+</body>
+</html>
